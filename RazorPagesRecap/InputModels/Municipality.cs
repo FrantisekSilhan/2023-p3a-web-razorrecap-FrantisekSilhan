@@ -2,7 +2,7 @@
 
 namespace RazorPagesRecap.InputModels
 {
-    public enum Municipalities
+    public enum Municipality
     {
         [Display(Name = "Železný Brod")]
         ZeleznyBrod = 0,

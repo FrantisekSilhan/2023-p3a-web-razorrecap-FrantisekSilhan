@@ -3,6 +3,15 @@
 @{
 }
 <h1>test</h1>
-<form>
-	<label asp-for=""></label><input />
+
+<form method="post">
+	<label asp-for="@Model.FormIM.FirstName"></label><input asp-for="@Model.FormIM.FirstName" />
+	<label asp-for="@Model.FormIM.LastName"></label><input asp-for="@Model.FormIM.LastName" />
+	<label asp-for="@Model.FormIM.Email"></label><input asp-for="@Model.FormIM.Email" />
+	<label asp-for="@Model.FormIM.IsOver15"></label><input asp-for="@Model.FormIM.IsOver15" />
+	<label asp-for="@Model.FormIM.Municipality"></label><select asp-for="@Model.FormIM.Municipality" asp-items="Html.GetEnumSelectList<RazorPagesRecap.InputModels.Municipality>()"></select>
+	<label asp-for="@Model.FormIM.Gender"></label><select asp-for="@Model.FormIM.Gender" asp-items="Html.GetEnumSelectList<RazorPagesRecap.InputModels.Gender>()"></select>
+	<label asp-for="@Model.FormIM.Pronouns"></label><input asp-for="@Model.FormIM.Pronouns" />
+	<label asp-for="@Model.FormIM.Information"></label><textarea asp-for="@Model.FormIM.Information"></textarea>
+	<button type="submit">Odeslat</button>
 </form>

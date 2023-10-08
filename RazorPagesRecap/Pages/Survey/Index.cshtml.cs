@@ -6,9 +6,20 @@ namespace RazorPagesRecap.Pages.Survey
 {
     public class IndexModel : PageModel
     {
-        public FormIM formIM { get; set; }
+        [BindProperty]
+        public FormIM FormIM { get; set; } = new FormIM();
         public void OnGet()
         {
+        }
+
+        public IActionResult OnPost()
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+
+            return Page();
         }
     }
 }

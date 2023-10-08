@@ -14,14 +14,17 @@ namespace RazorPagesRecap.InputModels
         [Required]
         [EmailAddress]
         public string Email { get; set; }
+        [Display(Name = "Starší 15 let?")]
         public bool IsOver15 { get; set; }
         [Display(Name = "Bydliště")]
-        public Municipality municipality { get; set; }
+        public Municipality Municipality { get; set; }
         [Display(Name = "Pohlaví")]
-        public Gender gender { get; set; }
+        public Gender Gender { get; set; }
         [Display(Name = "Oslovení")]
         public string Pronouns { get; set; }
         [Display(Name = "Informace")]
+        [Required]
+        [MinLength(30)]
         public string Information { get; set; }
     }
 }
