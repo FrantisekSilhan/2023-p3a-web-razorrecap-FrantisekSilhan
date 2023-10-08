@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorPagesRecap.InputModels;
+using System.Collections.Immutable;
 
 namespace RazorPagesRecap.Pages.Survey
 {
@@ -16,7 +17,10 @@ namespace RazorPagesRecap.Pages.Survey
         {
             if (ModelState.IsValid)
             {
-
+                return RedirectToPage("/Welcome/Index", new
+                {
+                    municipality = FormIM.Municipality
+                });
             }
 
             return Page();
