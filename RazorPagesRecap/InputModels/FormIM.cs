@@ -1,0 +1,27 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RazorPagesRecap.InputModels
+{
+    public class FormIM
+    {
+        [Display(Name = "First Name")]
+        [Required]
+        public string FirstName { get; set; }
+        [Display(Name = "Last Name")]
+        [Required]
+        public string LastName { get; set; }
+        [Display(Name = "Email Address")]
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+        public bool IsOver15 { get; set; }
+        [Display(Name = "Bydliště")]
+        public Municipality municipality { get; set; }
+        [Display(Name = "Pohlaví")]
+        public Gender gender { get; set; }
+        [Display(Name = "Oslovení")]
+        public string Pronouns { get; set; }
+        [Display(Name = "Informace")]
+        public string Information { get; set; }
+    }
+}
